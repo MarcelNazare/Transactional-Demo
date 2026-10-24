@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#1c1b1b", "surface-bright": "#faf9f9", "surface-container": "#efeded", "canvas-soft": "#fafafa", "body-muted": "#4d4d4d", "on-error-container": "#93000a", "tertiary": "#000000", "status-error": "#ee0000", "surface-container-lowest": "#ffffff", "surface-container-high": "#e9e8e8", "tertiary-fixed": "#efdbff", "telemetry-cyan": "#50e3c2", "hairline": "#ebebeb", "inverse-surface": "#303031", "surface-container-highest": "#e3e2e2", "on-tertiary": "#ffffff", "on-surface-variant": "#444748", "on-surface": "#1b1c1c", "secondary": "#0057c0", "on-secondary-fixed-variant": "#004397", "inverse-primary": "#c8c6c5", "on-secondary-container": "#fefcff", "secondary-fixed-dim": "#aec6ff", "outline-variant": "#c4c7c7", "on-tertiary-fixed-variant": "#6600b7", "on-tertiary-fixed": "#2b0052", "error-container": "#ffdad6", "primary": "#000000", "secondary-container": "#006ff0", "primary-fixed-dim": "#c8c6c5", "status-warning": "#f5a623", "surface-container-low": "#f5f3f3", "primary-container": "#1c1b1b", "secondary-fixed": "#d8e2ff", "tertiary-fixed-dim": "#dbb8ff", "error": "#ba1a1a", "tertiary-container": "#2b0052", "on-background": "#1b1c1c", "hairline-strong": "#a1a1a1", "outline": "#747878", "surface-tint": "#5f5e5e", "canvas-recessed": "#f5f5f5", "surface": "#faf9f9", "on-primary-container": "#858383", "background": "#faf9f9", "surface-variant": "#e3e2e2", "on-secondary-fixed": "#001a43", "on-primary": "#ffffff", "surface-dim": "#dbdad9", "on-tertiary-container": "#a75dfa", "primary-fixed": "#e5e2e1", "on-secondary": "#ffffff", "inverse-on-surface": "#f2f0f0", "telemetry-pink": "#ff0080", "on-error": "#ffffff", "on-primary-fixed-variant": "#474746" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-xl": "2rem", "margin": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem" }, "fontFamily": { "body-sm": [ "Geist" ], "label-sm": [ "Geist" ], "code-sm": [ "monospace" ], "headline-lg": [ "Hanken Grotesk" ], "headline-xl": [ "Hanken Grotesk" ], "headline-sm": [ "Hanken Grotesk" ], "body-md": [ "Geist" ], "headline-md": [ "Hanken Grotesk" ], "caption-mono": [ "monospace" ], "headline-xl-mobile": [ "Hanken Grotesk" ], "body-lg": [ "Geist" ], "label-md": [ "Geist" ] }, "fontSize": { "body-sm": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "500" } ], "code-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "headline-xl": [ "48px", { "lineHeight": "52px", "letterSpacing": "-0.05em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "26px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "30px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "caption-mono": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-xl-mobile": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.04em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ] } } } };</script></head><body class="bg-canvas-soft font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-hairline"><div class="h-16 max-w-[1200px] mx-auto px-space-md sm:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-shrink-0"><img alt="Copperbelt Car Hire Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WDKPaVZjlfl-wcwfA7XgSGb6tNrBBGO4NGCA_9xaXxlQwX30l3GZezJ2ny9cueWsRvi3xqzOmfX0CI9x73UDF7aHEK96KZqUEP_O9nb8EflJFCh29ZJ4752YRk-WIlI3yoiyRk8KYh11DaHa4yAMU3VOoDsdWlRFTcV30x1xsi5EtZxPeSxFNiWNLhjLS0qA-iIAZKPUKcXoLP3bPz7_iKBdJfWbdUNGsFx-OS7qjyKvJuER2UAbUvvdU"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">Copperbelt</span><span class="font-caption-mono text-caption-mono text-on-surface-variant uppercase tracking-widest text-[10px]">Fleet Logistics</span></div></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a aria-current="page" class="transition-colors py-space-xs text-primary font-semibold border-b-2 border-primary" data-path="fleet" href="#">Fleet</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="locations" href="#">Locations</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="rates" href="#">Rates</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md flex-shrink-0"><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface border border-hairline hover:bg-canvas-recessed hover:text-on-surface transition-all px-space-md py-space-sm rounded-full hidden sm:inline-flex items-center" data-path="contact-desk" href="#">Contact Desk</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary bg-primary hover:bg-primary-container hover:text-on-primary transition-all px-space-md py-space-sm rounded-full inline-flex items-center" data-path="sign-in" href="#">Sign In</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-canvas-soft min-h-[calc(100vh-64px)]"><div class="max-w-[1200px] mx-auto px-space-md sm:px-gutter py-space-xl"><div class="flex flex-col w-full">
+<!-- ATMOSPHERIC TOP GRADIENT GLOW (contained inside relative block) -->
+<div class="relative w-full overflow-hidden rounded-xl bg-surface-container-lowest border border-hairline mb-space-xl">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-gradient-to-r from-telemetry-cyan/15 via-secondary/15 to-telemetry-pink/15 blur-3xl pointer-events-none rounded-full"></div>
+<!-- HERO SECTION -->
+<div class="relative z-10 p-space-lg sm:p-space-xl md:p-12 flex flex-col gap-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-hairline">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-caption-mono text-caption-mono uppercase tracking-widest text-on-surface-variant font-medium">
+            COPPERBELT DISPATCH // FLEET INVENTORY v2.4
+          </span>
+</div>
+<div class="flex items-center gap-space-sm font-caption-mono text-caption-mono text-body-muted">
+<span>LAT -12.969</span>
+<span>•</span>
+<span>LON 28.636</span>
+<span>•</span>
+<span class="text-secondary font-medium">SAT_COMM: CONNECTED</span>
+</div>
+</div>
+<div class="max-w-3xl flex flex-col gap-space-md">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-[-0.05em] leading-[1.08] text-balance">
+          Direct vehicle dispatch across the Copperbelt.
+        </h1>
+<p class="font-body-lg text-body-lg text-body-muted max-w-2xl text-pretty leading-relaxed">
+          Real-time fleet availability for Ndola, Kitwe, and Chingola mining corridors. Zero reservation deposit required for verified corporate accounts.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="rounded-full bg-primary text-on-primary hover:bg-primary-container px-space-xl py-space-sm font-label-md text-label-md transition-all inline-flex items-center gap-space-xs" href="#fleet">
+<span>Check availability</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+<button class="rounded-full bg-surface-container-lowest text-on-surface border border-hairline hover:bg-canvas-recessed px-space-lg py-space-sm font-label-md text-label-md transition-all inline-flex items-center gap-space-xs" id="rateCardBtn">
+<span class="material-symbols-outlined text-[16px] text-body-muted">download</span>
+<span>Download rate card (.CSV)</span>
+</button>
+<span class="font-caption-mono text-caption-mono text-body-muted ml-auto hidden md:inline-flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+          SLAs: 45-min gate dispatch
+        </span>
+</div>
+</div>
+<!-- BOOKING ENQUIRY / DISPATCH QUERY TOOL -->
+<div class="border-t border-hairline bg-surface-container-low p-space-md sm:p-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+          DISPATCH_QUERY_PARAMETERS
+        </div>
+<div class="font-caption-mono text-caption-mono text-on-surface-variant">AUTO_ROUTING: MINE-PASS VERIFIED</div>
+</div>
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-space-sm items-end" id="dispatchForm" onsubmit="event.preventDefault(); window.location.href='#fleet';">
+<!-- Pickup Location -->
+<div class="lg:col-span-3 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-body-muted" for="pickupLoc">Pickup Location</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 rounded-lg bg-surface-container-lowest border border-hairline text-on-surface font-body-sm text-body-sm focus:outline-none focus:border-primary appearance-none cursor-pointer" id="pickupLoc">
+<option value="NLA">Ndola Airport Hub (NLA)</option>
+<option value="KIW">Kitwe Central Depot (Parklands)</option>
+<option value="CHG">Chingola Commercial Gate</option>
+<option value="SLW">Solwezi West Terminal</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-body-muted text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Drop-off Location -->
+<div class="lg:col-span-3 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-body-muted" for="dropLoc">Drop-off Location</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 rounded-lg bg-surface-container-lowest border border-hairline text-on-surface font-body-sm text-body-sm focus:outline-none focus:border-primary appearance-none cursor-pointer" id="dropLoc">
+<option value="SAME">Same as pickup depot</option>
+<option value="NLA">Ndola Airport Hub (NLA)</option>
+<option value="KIW">Kitwe Central Depot (Parklands)</option>
+<option value="CHG">Chingola Commercial Gate</option>
+<option value="SLW">Solwezi West Terminal</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-body-muted text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Pickup Date & Time -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-body-muted" for="pickupDate">Pickup Window</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest border border-hairline text-on-surface font-caption-mono text-caption-mono focus:outline-none focus:border-primary" id="pickupDate" type="date" value="2025-05-12"/>
+</div>
+<!-- Return Date & Time -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-body-muted" for="returnDate">Return Window</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest border border-hairline text-on-surface font-caption-mono text-caption-mono focus:outline-none focus:border-primary" id="returnDate" type="date" value="2025-05-16"/>
+</div>
+<!-- Submit Button -->
+<div class="lg:col-span-2 flex flex-col">
+<button class="w-full h-10 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[16px]">search</span>
+<span>Search fleet</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- FLEET GRID SECTION -->
+<section class="flex flex-col gap-space-lg mb-space-xl scroll-mt-20" id="fleet">
+<!-- Header with classification & ghost tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-hairline pb-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-caption-mono text-caption-mono uppercase tracking-widest text-on-surface-variant font-medium">
+          FLEET_INDEX [6 UNITS CURRENTLY TRACKED]
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-[-0.04em]">
+          Fleet specifications &amp; daily rates.
+        </h2>
+</div>
+<!-- Segmented Category Filters -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg border border-hairline overflow-x-auto" id="filterBar">
+<button class="filter-tab px-space-md py-1.5 rounded text-on-primary bg-primary font-label-sm text-label-sm transition-all whitespace-nowrap" data-filter="all">
+          All Fleet
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded text-body-muted hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-all whitespace-nowrap" data-filter="4x4">
+          4x4 Corridors
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded text-body-muted hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-all whitespace-nowrap" data-filter="executive">
+          Executive Utility
+        </button>
+<button class="filter-tab px-space-md py-1.5 rounded text-body-muted hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-all whitespace-nowrap" data-filter="commercial">
+          Commercial Pickups
+        </button>
+</div>
+</div>
+<!-- 3-UP FLEET GRID -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="vehicleGrid">
+<!-- UNIT 1: Toyota Hilux 2.8 GD-6 -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all hover:border-hairline-strong" data-category="4x4 commercial">
+<div>
+<!-- Top Row: Category + Status Badge -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: HLX-28-01</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Available
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Toyota Hilux 2.8 GD-6
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">4x4 Double Cab // Mine-Spec Corridor</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$135</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 3,450 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Rugged Toyota Hilux double cab pickup truck finished in arctic white parked on a graded Copperbelt industrial road, high daylight contrast, clean engineering aesthetic, crisp side profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6G5TVgvBH3rnO68UfsMTpRQeu9-hbSbuRot7CQn-mo2sT6qfJ0Lw7Kczav20qzCGgSwYmMxzdlRmxk6HEE9fttOks8KgulHkXNQt64s5L01U3zISk6R7rnK85U3AmdHD-b2ncsdFDcQemoP9k9rLr6T3qY0kAaYtBqR_vB9NWzoXqs58-J91SNtBalTUCknHYySOROnOO37sKenPyeIrAIWmv_LdQjN5pZayYhBRg5VTNSKOw9beTQg"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-on-surface">DEPOT: NDOLA HUB</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>5 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>6-Speed Auto</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span>
+<span>Diesel 4WD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">shield</span>
+<span>Heavy Terrain Pack</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">INSTANT_DISPATCH</span>
+<button class="reserve-btn rounded-full bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 font-label-sm text-label-sm transition-all inline-flex items-center gap-1" data-unit="Hilux 2.8 GD-6">
+<span>Reserve unit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- UNIT 2: Toyota Land Cruiser Prado TX-L -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all hover:border-hairline-strong" data-category="4x4 executive">
+<div>
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: PRD-28-04</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Available
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Land Cruiser Prado TX-L
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">Executive SUV // Site &amp; Highway Tier 1</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$160</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 4,100 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Black Toyota Land Cruiser Prado TX-L luxury SUV parked in front of an executive terminal hangar, polished metallic surface, sharp shadows, high-contrast monochrome corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWA29IIuJmFsJR_Kl6Q7Uhtdk2bJUGGJBjppo7_IOVLcOkC0K3T8Ue5jKQZJmJeZTI3lzVrJGvf2HHoH0q46uwF3b0eBxAAjf2zabmfu3adfidjq74KK1L2xHo2-NTXQ2OlhzQ3Qvt3oWOzt9aYGjd4HAW9VoT45-ydVhwYN5xxNNuPCGUr5jRIGYsVOyOWgPfeDpHsthfUzrgxsc5lQncpdIM-EBEAZzsNQ0aT2t2No1aLkzUlAip-w"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-on-surface">DEPOT: KITWE CENTRAL</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>7 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>Automatic Trans</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span>
+<span>Diesel 4WD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">height</span>
+<span>High Clearance 220mm</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">INSTANT_DISPATCH</span>
+<button class="reserve-btn rounded-full bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 font-label-sm text-label-sm transition-all inline-flex items-center gap-1" data-unit="Land Cruiser Prado TX-L">
+<span>Reserve unit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- UNIT 3: Ford Ranger 2.0 Bi-Turbo Wildtrak -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all opacity-85 hover:border-hairline-strong" data-category="4x4 commercial">
+<div>
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: RNG-20-02</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-surface-container-high text-body-muted border border-hairline font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-body-muted"></span> Booked
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Ford Ranger Wildtrak 4x4
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">2.0 Bi-Turbo // Heavy Payload Package</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$140</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 3,580 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[40%]" data-alt="Grey Ford Ranger Wildtrak commercial pickup equipped with roll bars and all-terrain tires situated at an industrial mine depot checkpoint, architectural perspective, diffused daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYQREjrJlhz4-rZfz7q0o_uMGOrpc6HD82iMEqO8P3T6P461xnZrGYr0C4UNWM8y6MC7P9hnWTza67Nou7_eQ8qh1ucqybFWaCKZkpz8CeGz41uIdwhUwuxgnTvJ7SqfbZpK4z7Acy_G8Nt8Hg0NuO8xSZ0OVLmC6bCtjcKeEyBVrXPguKfR0538DbG0r3_mirFMLPUJ8CitKLUjxDPDEGUGcsKqrcQ2mqo269TurCqshuvSkKlD2kw"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-body-muted">IN TRANSIT: SOLWEZI</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>5 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>10-Speed Auto</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span>
+<span>Diesel 4WD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">construction</span>
+<span>Mine-Spec Rollbar</span>
+</div>
+</div>
+</div>
+<!-- Action CTA (Disabled style) -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">AVAIL_FROM: 18_MAY</span>
+<button class="waitlist-btn rounded-full bg-surface-container text-body-muted hover:text-on-surface hover:bg-surface-variant border border-hairline px-space-md py-1.5 font-label-sm text-label-sm transition-all" data-unit="Ford Ranger Wildtrak">
+            Join waitlist
+          </button>
+</div>
+</article>
+<!-- UNIT 4: Toyota Fortuner 2.8 GD-6 VX -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all hover:border-hairline-strong" data-category="4x4 executive">
+<div>
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: FTN-28-09</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Available
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Toyota Fortuner 2.8 VX
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">Midsize Executive SUV // Cross-Corridor</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$125</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 3,200 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Charcoal silver Toyota Fortuner VX vehicle standing on concrete staging pad outside an airport VIP lounge, directional afternoon sun, sharp reflections and minimalist framing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-XiQWx-LQhvuJsyw23gPKGzt2sLDs6wAioXduv2Rt1sPK_UgKjG-mCDE7G6he9aDon1RjBPuzmt_Lxjq__HFIe9nIz7egfTMs68p1asCifjSFi1_M1v9HPi0p4JOucFTR1oyqOMAM86bYdXb4AVvrZlOtdb3oF_KW_UkC8LNmpgr7GA6xpSgJ8Jgznig4p9wKY4tnTHgUmg84CpQ01-OJr0GDUlK_EbvvU8ZUSBF7LWWcoGQYnxIGeg"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-on-surface">DEPOT: NDOLA HUB</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>7 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>Automatic Trans</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span>
+<span>Diesel 2.8 GD-6</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">workspace_premium</span>
+<span>Executive Spec Leather</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">INSTANT_DISPATCH</span>
+<button class="reserve-btn rounded-full bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 font-label-sm text-label-sm transition-all inline-flex items-center gap-1" data-unit="Toyota Fortuner 2.8 VX">
+<span>Reserve unit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- UNIT 5: Isuzu D-Max 3.0 Ddi V-Cross -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all hover:border-hairline-strong" data-category="4x4 commercial">
+<div>
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: DMX-30-07</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Available
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Isuzu D-Max 3.0 V-Cross
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">Reinforced Utility // Heavy Duty Undercarriage</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$115</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 2,950 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Sturdy Isuzu D-Max V-Cross heavy double cab pickup truck in white finish parked beside a telecommunications mast in Kitwe, low angle view, bright technical illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEp6MViTGunYD8Pz-CVIvVUah5UfE9H8WTMRToglUehGU8N4i3S2jYxJ2_xFGj9mqH7sdaAmxXTRKm7U-3WIfOb_LZ3IoNJeXgja3xqu1z8Jsvla31KdBElqWVFKWhUQsaQinVsxeBVxdvEYOuidpVbQxZiVPffoGLJGFo5eT6hZ4Rm0osQnpzGN5cvkPhvVM8mt4kml8eVaU4rOIVZFYFN1-S9NfnNMC8gTNKODyFf9WEIOjb9CqM_w"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-on-surface">DEPOT: CHINGOLA GATE</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>5 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>6-Speed Auto</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_gas_station</span>
+<span>Diesel 4WD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">travel_explore</span>
+<span>Reinforced Sump Guard</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">INSTANT_DISPATCH</span>
+<button class="reserve-btn rounded-full bg-primary text-on-primary hover:bg-primary-container px-space-md py-1.5 font-label-sm text-label-sm transition-all inline-flex items-center gap-1" data-unit="Isuzu D-Max 3.0 V-Cross">
+<span>Reserve unit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- UNIT 6: Toyota RAV4 AWD Hybrid -->
+<article class="vehicle-card flex flex-col justify-between bg-surface-container-lowest border border-hairline rounded-lg p-space-md sm:p-space-lg transition-all opacity-85 hover:border-hairline-strong" data-category="executive">
+<div>
+<!-- Top Row -->
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">UNIT_ID: RAV-25-11</span>
+<span class="font-caption-mono text-caption-mono px-2 py-0.5 rounded-full bg-surface-container-high text-body-muted border border-hairline font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-body-muted"></span> Booked
+            </span>
+</div>
+<!-- Vehicle Title -->
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight mb-space-xs">
+            Toyota RAV4 AWD Hybrid
+          </h3>
+<p class="font-caption-mono text-caption-mono text-on-surface-variant mb-space-md">Urban Corridor Compact // High Fuel Efficiency</p>
+<!-- PROMINENT DAILY RATE ANCHOR -->
+<div class="p-space-md rounded-lg bg-surface-container-low mb-space-md flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary leading-none">$95</span>
+<span class="font-caption-mono text-caption-mono text-body-muted">/day</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">ZMW 2,450 /day</span>
+</div>
+<!-- Visual Placeholder -->
+<div class="relative w-full h-36 mb-space-md overflow-hidden rounded bg-surface-container-low">
+<img class="w-full h-full object-cover grayscale-[40%]" data-alt="Modern Toyota RAV4 AWD crossover vehicle in slate grey parked along a modern asphalt commercial lane in Ndola, clean architecture background, minimalist Scandinavian-inspired lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-vw6sBcIw84CRZtQdEB7jYkxK0rfSk5YqMcCiwRZ3hZ_zzbSd4jg3UoYX29qDQzfF3j933yg_U-PtgovF0FwX4QwPKNTvDI4VvRRbJbvcpwESeDbJGUhlN96DN-1w8L_khRRsAZd8fqgTE6_OPsdAbvzqbDKlMwE_26mm5VOMjDCVV2iHBBXvCryEbQptSLQyqctfWJiUt9FuOMdVrV4PnNAYGixP1W-TALl08-s32tPkPdypj8n10A"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-sm px-2 py-0.5 rounded font-caption-mono text-caption-mono text-[10px] text-body-muted">DEPOT: NDOLA AIRPORT</div>
+</div>
+<!-- Specs Matrix -->
+<div class="grid grid-cols-2 gap-y-2 gap-x-3 pt-space-xs pb-space-md border-b border-hairline font-body-sm text-body-sm text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span>5 Passengers</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">settings</span>
+<span>E-CVT Drive</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span>Petrol / Hybrid AWD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+<span>Urban Corridor Spec</span>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-space-md mt-auto flex items-center justify-between gap-space-sm">
+<span class="font-caption-mono text-caption-mono text-body-muted">AVAIL_FROM: 15_MAY</span>
+<button class="waitlist-btn rounded-full bg-surface-container text-body-muted hover:text-on-surface hover:bg-surface-variant border border-hairline px-space-md py-1.5 font-label-sm text-label-sm transition-all" data-unit="Toyota RAV4 Hybrid">
+            Notify availability
+          </button>
+</div>
+</article>
+</div>
+</section>
+<!-- LOGISTICS & OPERATIONAL SPECS (VERCEL DATA TABLE + TERMINAL) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- 4-Column Depots Table -->
+<div class="lg:col-span-8 flex flex-col bg-surface-container-lowest border border-hairline rounded-lg overflow-hidden">
+<div class="p-space-md border-b border-hairline flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-caption-mono text-caption-mono text-primary font-medium uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-secondary">hub</span>
+<span>DISPATCH_DEPOT_NETWORK // COPPERBELT_CORRIDOR</span>
+</div>
+<span class="font-caption-mono text-caption-mono text-body-muted">4 NODES ACTIVE</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-hairline font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">
+<th class="py-2.5 px-space-md">Depot Hub</th>
+<th class="py-2.5 px-space-md">Physical Sector</th>
+<th class="py-2.5 px-space-md">Hours / Gate</th>
+<th class="py-2.5 px-space-md text-right">Radio Dispatch</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y divide-hairline">
+<tr class="hover:bg-canvas-recessed transition-colors">
+<td class="py-3 px-space-md font-medium text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Ndola International (NLA)
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant font-caption-mono text-caption-mono">Terminal 1 Apron Gate 3</td>
+<td class="py-3 px-space-md text-body-muted">24 / 7 Continuous</td>
+<td class="py-3 px-space-md text-right font-caption-mono text-caption-mono text-primary">+260 212 612 001</td>
+</tr>
+<tr class="hover:bg-canvas-recessed transition-colors">
+<td class="py-3 px-space-md font-medium text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Kitwe Central Depot
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant font-caption-mono text-caption-mono">Plot 448 Parklands Commercial</td>
+<td class="py-3 px-space-md text-body-muted">05:30 - 22:00 CAT</td>
+<td class="py-3 px-space-md text-right font-caption-mono text-caption-mono text-primary">+260 212 224 889</td>
+</tr>
+<tr class="hover:bg-canvas-recessed transition-colors">
+<td class="py-3 px-space-md font-medium text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Chingola Commercial Gate
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant font-caption-mono text-caption-mono">Kabundi Industrial Spine</td>
+<td class="py-3 px-space-md text-body-muted">06:00 - 20:00 CAT</td>
+<td class="py-3 px-space-md text-right font-caption-mono text-caption-mono text-primary">+260 212 711 405</td>
+</tr>
+<tr class="hover:bg-canvas-recessed transition-colors">
+<td class="py-3 px-space-md font-medium text-primary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Solwezi West Terminal
+              </td>
+<td class="py-3 px-space-md text-on-surface-variant font-caption-mono text-caption-mono">Kansanshi Mine Access Rd</td>
+<td class="py-3 px-space-md text-body-muted">06:00 - 21:00 CAT</td>
+<td class="py-3 px-space-md text-right font-caption-mono text-caption-mono text-primary">+260 218 821 119</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low border-t border-hairline flex items-center justify-between text-body-muted font-caption-mono text-caption-mono">
+<span>GEOFENCE TELEMETRY: ACTIVE ON ALL MINING HAUL ROADS</span>
+<span class="text-secondary font-medium">RECOVERY TEAM ON-CALL</span>
+</div>
+</div>
+<!-- Vercel Inverted Terminal / API CLI Mockup -->
+<div class="lg:col-span-4 bg-primary text-on-primary rounded-lg border border-hairline p-space-md flex flex-col justify-between font-caption-mono text-caption-mono">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-primary-container text-body-muted">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+<span class="ml-2 text-on-primary-container">copperbelt-cli v2.4</span>
+</div>
+<span class="text-body-muted">BASH</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-xs text-surface-container-lowest">
+<p class="text-body-muted">// Instant automated dispatch trigger</p>
+<p class="text-telemetry-cyan font-semibold flex items-center gap-1">
+<span class="text-body-muted">$</span> copperbelt dispatch --depot ndola --unit hlx-28-01
+          </p>
+<p class="text-surface-dim mt-space-xs">&gt; Verifying corporate telemetry credentials...</p>
+<p class="text-surface-dim">&gt; Unit [HLX-28-01] geofence released.</p>
+<p class="text-surface-dim">&gt; Gate pass generated: <span class="text-telemetry-cyan">#CPB-9982-NDL</span></p>
+<p class="text-telemetry-cyan mt-space-xs">&gt; Status: DISPATCH_CONFIRMED [ETA: 12 MIN]</p>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-primary-container flex items-center justify-between text-on-primary-container text-[11px]">
+<span>ENTERPRISE REST API</span>
+<button class="text-surface-container-lowest hover:text-telemetry-cyan transition-colors flex items-center gap-1" id="copyCliBtn">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy snippet</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CORPORATE CLAUSE BANNER -->
+<div class="w-full rounded-lg bg-surface-container-low border border-hairline p-space-md sm:p-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest border border-hairline flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">corporate_fare</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-semibold">Corporate Fleet Accounts &amp; Long-Term Mining Leases</h4>
+<p class="font-body-sm text-body-sm text-body-muted">Direct consolidated billing, dedicated standby units, and cross-border Copperbelt corridor transit clearance.</p>
+</div>
+</div>
+<a class="rounded-full bg-surface-container-lowest border border-hairline text-on-surface hover:bg-canvas-recessed px-space-lg py-space-sm font-label-sm text-label-sm whitespace-nowrap transition-all flex-shrink-0" href="#">
+      Contact Commercial Desk →
+    </a>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-200 pointer-events-none bg-primary text-on-primary px-space-md py- space-sm py-2.5 rounded-lg shadow-lg font-caption-mono text-caption-mono flex items-center gap-2 border border-hairline" id="toast">
+<span class="material-symbols-outlined text-[16px] text-telemetry-cyan">check_circle</span>
+<span id="toastMsg">Action completed successfully.</span>
+</div>
+<!-- CLIENT INTERACTIVITY LOGIC -->
+<script>
+    // Tab Filtering Logic
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const vehicleCards = document.querySelectorAll('.vehicle-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary');
+          t.classList.add('text-body-muted');
+        });
+        tab.classList.add('bg-primary', 'text-on-primary');
+        tab.classList.remove('text-body-muted');
+
+        const filter = tab.getAttribute('data-filter');
+        vehicleCards.forEach(card => {
+          const categories = card.getAttribute('data-category') || '';
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hidden');
+            card.classList.add('flex');
+          } else {
+            card.classList.add('hidden');
+            card.classList.remove('flex');
+          }
+        });
+      });
+    });
+
+    // Toast notification helper
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 3000);
+    }
+
+    // Reservation CTA clicks
+    document.querySelectorAll('.reserve-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const unit = btn.getAttribute('data-unit');
+        showToast('Direct hold applied for: ' + unit);
+      });
+    });
+
+    // Waitlist clicks
+    document.querySelectorAll('.waitlist-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const unit = btn.getAttribute('data-unit');
+        showToast('Enrolled in alert dispatch for ' + unit);
+      });
+    });
+
+    // CSV Download simulation
+    const rateCardBtn = document.getElementById('rateCardBtn');
+    if (rateCardBtn) {
+      rateCardBtn.addEventListener('click', () => {
+        const csvContent = "UNIT_ID,NAME,CATEGORY,RATE_USD,RATE_ZMW,SPECS\\n" +
+          "HLX-28-01,Toyota Hilux 2.8 GD-6,4x4 Commercial,135,3450,5 Pax Auto Diesel\\n" +
+          "PRD-28-04,Land Cruiser Prado TX-L,Executive 4x4,160,4100,7 Pax Auto Diesel\\n" +
+          "RNG-20-02,Ford Ranger Wildtrak,4x4 Commercial,140,3580,5 Pax 10-Spd Diesel\\n" +
+          "FTN-28-09,Toyota Fortuner 2.8 VX,Executive SUV,125,3200,7 Pax Auto Diesel\\n" +
+          "DMX-30-07,Isuzu D-Max 3.0 V-Cross,Commercial 4x4,115,2950,5 Pax Auto Diesel\\n" +
+          "RAV-25-11,Toyota RAV4 AWD Hybrid,Urban Utility,95,2450,5 Pax E-CVT Hybrid\\n";
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.setAttribute('href', url);
+        link.setAttribute('download', 'copperbelt_fleet_rates_2025.csv');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        showToast('Rate card (.CSV) downloaded.');
+      });
+    }
+
+    // Copy CLI snippet
+    const copyCliBtn = document.getElementById('copyCliBtn');
+    if (copyCliBtn) {
+      copyCliBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('copperbelt dispatch --depot ndola --unit hlx-28-01')
+          .then(() => showToast('CLI command copied to clipboard.'))
+          .catch(() => showToast('Command: copperbelt dispatch --depot ndola --unit hlx-28-01'));
+      });
+    }
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest border-t border-hairline py-space-xl"><div class="max-w-[1200px] mx-auto px-space-md sm:px-gutter grid grid-cols-1 md:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-sm"><div class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">System Platform</div><p class="font-body-sm text-body-sm text-on-surface-variant">Executive fleet provisioning and enterprise vehicle telematics along the Copperbelt corridor.</p><div class="font-caption-mono text-caption-mono text-on-surface-variant mt-space-sm">SYS_VER: 2.14.0 // ACTIVE</div></div><div class="flex flex-col gap-space-sm"><div class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">Operations</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors">Fleet Dispatch</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Mine-Spec Vehicles</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Chauffeur Corporate</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Corridor Transfer</li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">Depots</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-on-surface transition-colors">Ndola International Hub</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Kitwe Central Depot</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Chingola Commercial Gate</li><li class="text-on-surface-variant hover:text-on-surface transition-colors">Solwezi West Terminal</li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-caption-mono text-caption-mono text-body-muted uppercase tracking-wider">Telemetry &amp; Compliance</div><p class="font-body-sm text-body-sm text-on-surface-variant">All vehicles fitted with satellite geofencing and real-time maintenance telemetry.</p><div class="font-caption-mono text-caption-mono text-body-muted mt-space-md">© 2025 COPPERBELT CAR HIRE LTD.</div></div></div></footer></body></html>
